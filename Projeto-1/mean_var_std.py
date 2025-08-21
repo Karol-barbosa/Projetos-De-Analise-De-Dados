@@ -31,3 +31,4 @@ def calculate(numbers):
     }
     
     return calculations
+## Rodar com python -m pytest -q

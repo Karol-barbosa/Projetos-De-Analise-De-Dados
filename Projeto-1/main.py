@@ -11,7 +11,7 @@ for key, value in result.items():
 
 # Teste do ValueError
 try:
-    calculate([1, 2, 3])  # lista com menos de 9 elementos
+    calculate([1, 2, 3]) 
 except ValueError as e:
     print("\nErro capturado corretamente:")
     print(e)
