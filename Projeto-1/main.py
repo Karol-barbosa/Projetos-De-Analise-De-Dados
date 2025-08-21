@@ -1,8 +1,17 @@
-# This entrypoint file to be used in development. Start by reading README.md
-import mean_var_std
-from unittest import main
+from mean_var_std import calculate
 
-print(mean_var_std.calculate([0,1,2,3,4,5,6,7,8]))
+# Teste com lista de 9 números
+numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 
-# Run unit tests automatically
-main(module='test_module', exit=False)
+result = calculate(numbers)
+
+print("Resultados da função calculate():")
+for key, value in result.items():
+    print(f"{key}: {value}")
+
+# Teste do ValueError
+try:
+    calculate([1, 2, 3])  # lista com menos de 9 elementos
+except ValueError as e:
+    print("\nErro capturado corretamente:")
+    print(e)
